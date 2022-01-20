@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+h3,h4{
+    margin-left: 4rem;
+}
+form{
+    margin-left: 3rem;
+}
+form, input,button{
+    margin-top: 2rem;
+}
+p{
+    margin-left: 3rem;
+    color: blue;
+}
