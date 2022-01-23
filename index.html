@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>server</title>
+    <title>static</title>
 </head>
 <body>
     <h1>Custom web server</h1>
-    <h5>it has the following links to test its functionality</h5>
-    
+    <h3>this is a static page</h3>
     <ul>
-        <a href="static.html">Home</a>
+        <a href="/index.html">Home</a>
         <a href='form.html'>Form</a>
-        <a href='sec.html'>Security</a>
-
     </ul>
+    <h4>Things to test</h4>
+    <ul>
+        <li>Serving static file</li>
+        <li>serving dynamically generated HTML</li>
+        <li>TLS or HTTPS security</li>
+        <li>URL writing like mod_rewrite</li>
+    </ul>
+    <h3>this server only supports GET and POST method</h3>
+    <h4>supported headers are Content-Type and Content-Length</h4>
 </body>
 </html>

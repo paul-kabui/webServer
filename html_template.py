@@ -1,4 +1,20 @@
+import json
+import os
+def read_comments():
+    if os.path.isfile('comment.txt'):
+        with open("comment.txt", "r") as file:
+            content = file.read()
+            if content != "":
+                return content
+            else:
+                return "no comment posted yet"
+    else:
+        return "problem loading the comments"
 
+
+def create_html():
+    with open('form.html', 'w') as file:
+        html_template = """
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -24,13 +40,10 @@
                 <button type="submit">Post</button>
             </form>
             <h4>posted comments</h4>
-            <p id="comment">name: cddsa</br>comment: sdsad</br>
-name: dwaed</br>comment: sdasdasdsa</br>
-name: dwretrt</br>comment: dfdsfds</br>
-name: 8989</br>comment: 898</br>
-name: 8989</br>comment: 898</br>
-
+            <p id="comment">"""+read_comments()+"""
              
         </body>
         </html>
-        
+        """ 
+        file.write(html_template)
+        file.close
